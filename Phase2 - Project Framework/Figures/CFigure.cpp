@@ -4,8 +4,7 @@ CFigure::CFigure(GfxInfo FigureGfxInfo)
 {
 	FigGfxInfo = FigureGfxInfo;	//Default status is non-filled.
 	Selected = false;
-	Hidden = false;
-
+	IsCut = false;
 	factor = 1;
 }
 
@@ -18,6 +17,14 @@ float CFigure::getDistance(Point p1, Point p2) {
 void CFigure::SetSelected(bool s)
 {
 	Selected = s;
+}
+void CFigure::SetCut(bool Cut){
+
+	IsCut = Cut;
+}
+bool CFigure::IsFigureCut(){
+
+	return IsCut;
 }
 
 
@@ -54,41 +61,4 @@ double CFigure::getFactor() {
 
 void CFigure::setFactor(double factor) {
 	this->factor = factor;
-}
-
-void CFigure::hide() {
-	Hidden = true;
-}
-void CFigure::unhide() {
-	Hidden = false;
-}
-bool CFigure::hidden(){
-	return Hidden;
-}
-
-
-bool CFigure::sameFillClr(CFigure* p)
-{
-	return FigGfxInfo.FillClr == p->getGfxInfo().FillClr && FigGfxInfo.isFilled == p->getGfxInfo().isFilled ;
-}
-string CFigure::FillClr()
-{
-	bool filled = FigGfxInfo.isFilled;
-	color c = FigGfxInfo.FillClr;
-	if (!filled)
-		return "Not filled";
-	else
-	{
-		if (c == BLACK)
-			return "Black";
-		else if (c == WHITE)
-			return "White";
-		else if (c == RED)
-			return "RED";
-		else if (c == GREEN)
-			return "GREEN";
-		else 
-			return "BLUE";
-
-	}
 }
