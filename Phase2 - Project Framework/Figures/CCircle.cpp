@@ -14,9 +14,11 @@ void CCircle::getCenter(Point & p1)const {
 }
 
 void CCircle::Draw(Output * pOut)const {
-
-	pOut->DrawCir(center, FigGfxInfo, IsCut, Selected, factor);
-	pOut->DrawOrigin(center);
+	if (!Hidden)
+	{
+		pOut->DrawCir(center, FigGfxInfo, Selected, factor);
+		pOut->DrawOrigin(center);
+	}
 }
 bool CCircle::isInside(Point click){
 	float D = getDistance(click, center);
@@ -27,4 +29,12 @@ bool CCircle::isInside(Point click){
 
 
 
+}
+bool CCircle::sametype(CFigure* p)
+{
+	return (dynamic_cast<CCircle*>(p) != NULL);
+}
+string CCircle::String()
+{
+	return "Circle";
 }
