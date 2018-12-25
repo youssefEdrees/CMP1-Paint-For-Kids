@@ -43,8 +43,11 @@ void CTriangle::SetNewLocation(const Point & p1, const Point & p2, const Point &
 
 void CTriangle::Draw(Output * pOut)const {
 	
-	pOut->DrawTri(p1, p2, p3, FigGfxInfo,IsCut, Selected, factor);
-	pOut->DrawOrigin(p1);
+	if (!Hidden)
+	{
+		pOut->DrawTri(p1, p2, p3, FigGfxInfo, Selected, factor);
+		pOut->DrawOrigin(p1);
+	}
 }
 
 
@@ -58,5 +61,12 @@ bool CTriangle::isInside(Point click) {
 	else
 		return false;
 }
-
+bool CTriangle::sametype(CFigure* p)
+{
+	return (dynamic_cast<CTriangle*>(p) != NULL);
+}
+string CTriangle::String()
+{
+	return "Triangle";
+}
 
