@@ -14,6 +14,7 @@ void SwitchtoPMAction::ReadActionParameters(){}
 
 void SwitchtoPMAction::Execute() {
 	Output* pOut = pManager->GetOutput();
+	pOut->ClearToolBar();
 	pOut->CreatePlayToolBar();
 }
 

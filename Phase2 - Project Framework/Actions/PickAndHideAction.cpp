@@ -90,6 +90,8 @@ void PickAndHideAction::Execute()
 	}
 	if (right == max)
 		pOut->PrintMessage("YOU WON! right:" + to_string(right) + " wrong:" + to_string(wrong));
+	else
+		pOut->ClearStatusBar();
 	pManager->UnhideAll();
 	pManager->UpdateInterface();
 }
