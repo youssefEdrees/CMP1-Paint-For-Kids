@@ -81,6 +81,7 @@ void PickAndHideAction::Execute()
 			}
 			pfig->hide();
 			pfig = NULL;
+			pOut->ClearDrawArea();
 			pManager->UpdateInterface();
 		
 		}
