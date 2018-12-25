@@ -32,8 +32,11 @@ void CLine::SetNewLocation(const Point &p1, const Point &p2) {
 void CLine::Draw(Output* pOut) const
 {
 	//Call Output::DrawRect to draw a rectangle on the screen	
-	pOut->DrawLi(point1, point2, FigGfxInfo,IsCut, Selected, factor);
-	pOut->DrawOrigin(point1);
+	if (!Hidden)
+	{
+		pOut->DrawLi(point1, point2, FigGfxInfo, Selected, factor);
+		pOut->DrawOrigin(point1);
+	}
 }
 
 bool CLine::isInside(Point click) {
@@ -45,6 +48,14 @@ bool CLine::isInside(Point click) {
 	if ((d1 + d2) <= d * 1.0001)
 		return true;
 	return false;
+}
+bool CLine::sametype(CFigure* p)
+{
+	return (dynamic_cast<CLine*>(p) != NULL);
+}
+string CLine::String()
+{
+	return "Line";
 }
 
 
