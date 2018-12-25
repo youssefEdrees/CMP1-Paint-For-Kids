@@ -34,8 +34,11 @@ void CRectangle::SetNewLocation(const Point &p1, const Point &p2) {
 void CRectangle::Draw(Output* pOut) const
 {
 	//Call Output::DrawRect to draw a rectangle on the screen	
-	pOut->DrawRect(Corner1, Corner2, FigGfxInfo,IsCut,Selected,factor);
-	pOut->DrawOrigin(Corner1);
+	if (!Hidden)
+	{
+		pOut->DrawRect(Corner1, Corner2, FigGfxInfo, Selected, factor);
+		pOut->DrawOrigin(Corner1);
+	}
 }
 
 bool CRectangle::isInside(Point click) {
@@ -49,4 +52,12 @@ bool CRectangle::isInside(Point click) {
 		return false;
 
 
+}
+bool CRectangle::sametype(CFigure* p)
+{
+	return (dynamic_cast<CRectangle*>(p) != NULL);
+}
+string CRectangle::String()
+{
+	return "Rectangle";
 }
