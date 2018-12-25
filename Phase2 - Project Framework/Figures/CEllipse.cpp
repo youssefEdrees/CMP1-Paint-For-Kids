@@ -8,7 +8,7 @@ CEllipse::CEllipse(Point center, GfxInfo FigGFXInfo) :CFigure(FigGFXInfo) {
 void CEllipse::Draw(Output * pOut) const {
 	if (!Hidden)
 	{
-		pOut->DrawEl(center, FigGfxInfo, Selected, factor);
+		pOut->DrawEl(center, FigGfxInfo, IsCut, Selected, factor);
 		pOut->DrawOrigin(center);
 	}
 }

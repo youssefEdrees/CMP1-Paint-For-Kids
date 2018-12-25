@@ -16,7 +16,7 @@ void CCircle::getCenter(Point & p1)const {
 void CCircle::Draw(Output * pOut)const {
 	if (!Hidden)
 	{
-		pOut->DrawCir(center, FigGfxInfo, Selected, factor);
+		pOut->DrawCir(center, FigGfxInfo, IsCut, Selected, factor);
 		pOut->DrawOrigin(center);
 	}
 }

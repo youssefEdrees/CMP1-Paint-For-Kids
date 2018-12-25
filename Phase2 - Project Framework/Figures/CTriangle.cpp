@@ -45,7 +45,7 @@ void CTriangle::Draw(Output * pOut)const {
 	
 	if (!Hidden)
 	{
-		pOut->DrawTri(p1, p2, p3, FigGfxInfo, Selected, factor);
+		pOut->DrawTri(p1, p2, p3, FigGfxInfo, IsCut, Selected, factor);
 		pOut->DrawOrigin(p1);
 	}
 }

@@ -36,7 +36,7 @@ void CRectangle::Draw(Output* pOut) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	if (!Hidden)
 	{
-		pOut->DrawRect(Corner1, Corner2, FigGfxInfo, Selected, factor);
+		pOut->DrawRect(Corner1, Corner2, FigGfxInfo, IsCut, Selected, factor);
 		pOut->DrawOrigin(Corner1);
 	}
 }

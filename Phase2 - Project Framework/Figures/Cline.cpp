@@ -34,7 +34,7 @@ void CLine::Draw(Output* pOut) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	if (!Hidden)
 	{
-		pOut->DrawLi(point1, point2, FigGfxInfo, Selected, factor);
+		pOut->DrawLi(point1, point2, FigGfxInfo, IsCut, Selected, factor);
 		pOut->DrawOrigin(point1);
 	}
 }

@@ -8,7 +8,7 @@ CRhombus::CRhombus(Point center, GfxInfo figGFXInfo) :CFigure(figGFXInfo)
 void CRhombus::Draw(Output * pOut)const {
 	if (!Hidden)
 	{
-		pOut->DrawRh(center, FigGfxInfo, Selected, factor);
+		pOut->DrawRh(center, FigGfxInfo, IsCut, Selected, factor);
 		pOut->DrawOrigin(center);
 	}
 
