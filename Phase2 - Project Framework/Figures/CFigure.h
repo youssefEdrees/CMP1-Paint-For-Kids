@@ -43,6 +43,7 @@ public:
 	string FillClr();
 	virtual bool sametype(CFigure* p) = 0;
 	virtual string String() = 0;
+	virtual ~CFigure();
 
 	///The following functions should be supported by the figure class
 	///It should be overridden by each inherited figure

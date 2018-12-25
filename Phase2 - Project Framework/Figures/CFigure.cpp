@@ -99,3 +99,5 @@ string CFigure::FillClr()
 
 	}
 }
+
+CFigure::~CFigure(){}
