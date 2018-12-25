@@ -6,8 +6,11 @@ CEllipse::CEllipse(Point center, GfxInfo FigGFXInfo) :CFigure(FigGFXInfo) {
 
 
 void CEllipse::Draw(Output * pOut) const {
-	pOut->DrawEl(center, FigGfxInfo,IsCut, Selected, factor);
-	pOut->DrawOrigin(center);
+	if (!Hidden)
+	{
+		pOut->DrawEl(center, FigGfxInfo, Selected, factor);
+		pOut->DrawOrigin(center);
+	}
 }
 void CEllipse::SetNewLocation(const Point &p) {
 
@@ -30,4 +33,13 @@ bool CEllipse::isInside(Point click) {
 
 
 }
+bool CEllipse::sametype(CFigure* p)
+{
+	return (dynamic_cast<CEllipse*>(p) != NULL);
+}
+string CEllipse::String()
+{
+	return "Ellipse";
+}
+
 
