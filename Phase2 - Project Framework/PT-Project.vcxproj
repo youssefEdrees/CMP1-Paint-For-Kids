@@ -133,12 +133,16 @@
     <ClCompile Include="Actions\AddRectAction.cpp" />
     <ClCompile Include="Actions\AddRhombusAction.cpp" />
     <ClCompile Include="Actions\AddTriangleAction.cpp" />
+    <ClCompile Include="Actions\BringFrontSendBackAction.cpp" />
     <ClCompile Include="Actions\ChangeColorAction.cpp" />
+    <ClCompile Include="Actions\PickAndHideAction.cpp" />
     <ClCompile Include="Actions\ResizeAction.cpp" />
     <ClCompile Include="Actions\SaveLoad\LoadAction.cpp" />
     <ClCompile Include="Actions\SaveLoad\SaveAction.cpp" />
     <ClCompile Include="Actions\SaveLoad\SaveLoadUtility.cpp" />
     <ClCompile Include="Actions\SelectItemAction.cpp" />
+    <ClCompile Include="Actions\SwitchtoDMAction.cpp" />
+    <ClCompile Include="Actions\SwitchtoPMAction.cpp" />
     <ClCompile Include="ApplicationManager.cpp" />
     <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
     <ClCompile Include="CMUgraphicsLib\CMUgraphics.cpp" />
@@ -175,6 +179,8 @@
     <ClCompile Include="CMUgraphicsLib\keyqueue.cpp" />
     <ClCompile Include="CMUgraphicsLib\mousequeue.cpp" />
     <ClCompile Include="CMUgraphicsLib\windowinput.cpp" />
+    <ClCompile Include="CopyItemAction.cpp" />
+    <ClCompile Include="CutItemAction.cpp" />
     <ClCompile Include="Figures\CCircle.cpp" />
     <ClCompile Include="Figures\CEllipse.cpp" />
     <ClCompile Include="Figures\CFigure.cpp" />
@@ -185,6 +191,7 @@
     <ClCompile Include="GUI\Input.cpp" />
     <ClCompile Include="GUI\Output.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PasteItemAction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actions\Action.h" />
@@ -194,12 +201,16 @@
     <ClInclude Include="Actions\AddRectAction.h" />
     <ClInclude Include="Actions\AddRhombusAction.h" />
     <ClInclude Include="Actions\AddTriangleAction.h" />
+    <ClInclude Include="Actions\BringFrontSendBackAction.h" />
     <ClInclude Include="Actions\ChangeColorAction.h" />
+    <ClInclude Include="Actions\PickAndHideAction.h" />
     <ClInclude Include="Actions\ResizeAction.h" />
     <ClInclude Include="Actions\SaveLoad\LoadAction.h" />
     <ClInclude Include="Actions\SaveLoad\SaveAction.h" />
     <ClInclude Include="Actions\SaveLoad\SaveLoadUtility.h" />
     <ClInclude Include="Actions\SelectItemAction.h" />
+    <ClInclude Include="Actions\SwitchtoDMAction.h" />
+    <ClInclude Include="Actions\SwitchtoPMAction.h" />
     <ClInclude Include="ApplicationManager.h" />
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
     <ClInclude Include="CMUgraphicsLib\CMUgraphics.h" />
@@ -221,6 +232,8 @@
     <ClInclude Include="CMUgraphicsLib\mousequeue.h" />
     <ClInclude Include="CMUgraphicsLib\version.h" />
     <ClInclude Include="CMUgraphicsLib\windowinput.h" />
+    <ClInclude Include="CopyItemAction.h" />
+    <ClInclude Include="CutItemAction.h" />
     <ClInclude Include="DEFS.h" />
     <ClInclude Include="Figures\CCircle.h" />
     <ClInclude Include="Figures\CEllipse.h" />
@@ -232,6 +245,7 @@
     <ClInclude Include="GUI\Input.h" />
     <ClInclude Include="GUI\Output.h" />
     <ClInclude Include="GUI\UI_Info.h" />
+    <ClInclude Include="PasteItemAction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

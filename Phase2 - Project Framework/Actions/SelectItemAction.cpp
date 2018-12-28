@@ -66,7 +66,7 @@ void SelectItemAction::Execute() {
 				dynamic_cast<CRectangle *>(c)->getTranslatedPoints(p1,p2);
 				width = abs(p1.x - p2.x);
 				height = abs(p1.y - p2.y);
-				string m = "a Circle , id : " + to_string(ID) + " , Width : " + to_string(width) + " , height :"+ to_string(height)
+				string m = "a Rectangle , id : " + to_string(ID) + " , Width : " + to_string(width) + " , height :"+ to_string(height)
 					+ " , Start point : (" + to_string(p1.x) + "," + to_string(p1.y) + ")"
 					+ " , End point: (" + to_string(p2.x) + "," + to_string(p2.y) + ")"
 					;

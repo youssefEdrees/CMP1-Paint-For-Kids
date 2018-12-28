@@ -3,6 +3,7 @@
 #pragma once
 #include "..\defs.h"
 #include "..\GUI\Output.h"
+#include <string>
 
 //Base class for all figures
 class CFigure
@@ -11,8 +12,9 @@ protected:
 	int ID;		//Each figure has an ID
 	bool Selected;	//true if the figure is selected.
 	GfxInfo FigGfxInfo;	//Figure graphis info
-	
+	bool IsCut;
 	double factor;
+	bool Hidden;
 
 	// Add more parameters if needed.
 
@@ -22,6 +24,8 @@ public:
 	void setId(int id);
 	void SetSelected(bool s);	//select/unselect the figure
 	bool IsSelected() const;	//check whether fig is selected
+	void SetCut(bool Cut);
+	bool IsFigureCut();
 	GfxInfo getGfxInfo() const;
 	float getDistance(Point , Point);
 	double getFactor();
@@ -32,6 +36,14 @@ public:
 	virtual bool isInside(Point click) = 0;
 	void ChngDrawClr(color Dclr);	//changes the figure's drawing color
 	void ChngFillClr(color Fclr);	//changes the figure's filling color
+	void hide();
+	void unhide();
+	bool hidden();
+	bool sameFillClr(CFigure* p);
+	string FillClr();
+	virtual bool sametype(CFigure* p) = 0;
+	virtual string String() = 0;
+	virtual ~CFigure();
 
 	///The following functions should be supported by the figure class
 	///It should be overridden by each inherited figure
